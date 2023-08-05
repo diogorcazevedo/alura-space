@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'apps.galeria.apps.GaleriaConfig',
     'apps.usuarios.apps.UsuariosConfig',
+    'apps',
 
 ]
 
