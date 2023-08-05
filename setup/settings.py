@@ -1,5 +1,5 @@
-from pathlib import Path, os
-
+import os
+from pathlib import Path
 from django.template.context_processors import media
 from dotenv import load_dotenv
 from django.contrib.messages import constants as messages
@@ -31,8 +31,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'whitenoise.runserver_nostatic',
-    'galeria.apps.GaleriaConfig',
-    'usuarios.apps.UsuariosConfig',
+    'apps.galeria.apps.GaleriaConfig',
+    'apps.usuarios.apps.UsuariosConfig',
 
 ]
 
