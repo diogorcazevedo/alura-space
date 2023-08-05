@@ -31,8 +31,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'whitenoise.runserver_nostatic',
-    'apps.galeria.apps.GaleriaConfig',
-    'apps.usuarios.apps.UsuariosConfig',
+    'apps.galeria',
+    'apps.usuarios',
     'apps',
 
 ]
