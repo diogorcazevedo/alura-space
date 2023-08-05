@@ -2,8 +2,8 @@ from pathlib import Path, os
 
 from django.template.context_processors import media
 from dotenv import load_dotenv
+from django.contrib.messages import constants as messages
 import dj_database_url
-
 
 load_dotenv()
 
@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'whitenoise.runserver_nostatic',
     'galeria.apps.GaleriaConfig',
+    'usuarios.apps.UsuariosConfig',
 
 ]
 
@@ -75,8 +76,6 @@ WSGI_APPLICATION = 'setup.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-
-
 
 
 DATABASES = {
@@ -141,3 +140,11 @@ MEDIA_URL = "/media/"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# messages
+
+
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+    messages.SUCCESS: 'success'
+}
