@@ -46,7 +46,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-   # "whitenoise.middleware.WhiteNoiseMiddleware",
+    # "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = 'setup.urls'
@@ -134,11 +134,14 @@ USE_TZ = True
 
 # AWS Configuration
 
-AWS_ACCESS_KEY_ID = 'AKIAXEKRKEXP55ZJB5RZ'
+# AWS_ACCESS_KEY_ID = 'AKIAXEKRKEXP55ZJB5RZ'
+# AWS_SECRET_ACCESS_KEY = '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'
+# AWS_STORAGE_BUCKET_NAME = 'draz-alura-space'
 
-AWS_SECRET_ACCESS_KEY = 'u/jE4HRmkFojEZSnxUPnHeSSiIyhQyjvJE0qWAno'
 
-AWS_STORAGE_BUCKET_NAME = 'draz-alura-space'
+AWS_ACCESS_KEY_ID = str(os.getenv('AWS_ACCESS_KEY_ID'))
+AWS_SECRET_ACCESS_KEY = str(os.getenv('AWS_SECRET_ACCESS_KEY'))
+AWS_STORAGE_BUCKET_NAME = str(os.getenv('AWS_STORAGE_BUCKET_NAME'))
 
 AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 
